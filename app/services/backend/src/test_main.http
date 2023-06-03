@@ -1,0 +1,137 @@
+# Test your FastAPI endpoints
+
+GET http://127.0.0.1:8000/
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:8000/hello/User
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:8000/python
+Accept: application/json
+
+###
+
+POST http://127.0.0.1:8000/teams
+Content-Type: application/json
+
+{   "name": "CSC Futsal",
+    "country": "Spain",
+    "description": "Futbol Sala Team"}
+
+###
+
+GET http://127.0.0.1:8000/team/CSC%20Futsal
+Content-Type: application/json
+
+###
+
+DELETE http://127.0.0.1:8000/team/CSC%20Futsal
+Content-Type: application/json
+
+###
+
+GET http://127.0.0.1:8000/team/Volei%20Rubi
+Content-Type: application/json
+
+###
+
+PUT http://127.0.0.1:8000/team/Volei%20Rubi
+Content-Type: application/json
+
+{   "name": "Volei Rubi",
+    "country": "Colombia",
+    "description": "Club volei de Colombia"}
+
+###
+
+GET http://127.0.0.1:8000/competitions/
+Content-Type: application/json
+
+###
+
+GET http://127.0.0.1:8000/competition/0
+Content-Type: application/json
+
+###
+
+POST http://127.0.0.1:8000/competitions/
+Content-Type: application/json
+
+{   "id": 1,
+    "name": "Men's European Championship",
+    "category": "Junior",
+    "sport": "Hockey",
+    "teams": []}
+
+
+###
+
+PUT http://127.0.0.1:8000/competition/1
+Content-Type: application/json
+
+{"category": "Senior"}
+
+###
+
+PUT http://127.0.0.1:8000/competition/2
+Content-Type: application/json
+
+{   "id": 2,
+    "name": "Men's European Championship",
+    "category": "Alebin",
+    "sport": "Hockey",
+    "teams": []}
+
+###
+
+DELETE http://127.0.0.1:8000/competition/2
+Content-Type: application/json
+
+###
+
+GET http://127.0.0.1:8000/matches/
+Content-Type: application/json
+
+###
+
+GET http://127.0.0.1:8000/match/0
+Content-Type: application/json
+
+###
+
+POST http://127.0.0.1:8000/matches/
+Content-Type: application/json
+
+{   "id": 1,
+    "local": "CV Lesseps",
+    "visitor": "CV Sabadell",
+    "date": "2022-08-03",
+    "price": 15.20}
+
+
+###
+
+PUT http://127.0.0.1:8000/match/1
+Content-Type: application/json
+
+{"date": "2022-05-03"}
+
+###
+
+PUT http://127.0.0.1:8000/match/2
+Content-Type: application/json
+
+{   "id": 2,
+    "local": "CV Lesseps",
+    "visitor": "CV Vall d'Hebron",
+    "date": "2022-08-03",
+    "price": 15.20}
+
+###
+
+DELETE http://127.0.0.1:8000/matches/2
+Content-Type: application/json
